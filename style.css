@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(#0f0f0f, #1a1a1a);
+  color: white;
+  overflow-x: hidden;
+}
+
+.intro-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://media.giphy.com/media/L0NmyiFhZ9F2w/giphy.gif') center center / cover no-repeat;
+  text-align: center;
+  position: relative;
+}
+
+.intro-screen h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.coin {
+  width: 200px;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+.owner {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.8em;
+  color: #ffd700;
+}
+
+.content {
+  padding: 40px 20px;
+  background-image: url('https://www.transparenttextures.com/patterns/chili.png');
+  animation: moveBg 30s linear infinite;
+}
+
+h2 {
+  color: #ff4500;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li::before {
+  content: "🌶️ ";
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes moveBg {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
